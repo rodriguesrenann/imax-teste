@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/categories', 'CategoryController@index');
 Route::post('/categories', 'CategoryController@create');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

@@ -16,9 +16,14 @@ class CategoryController extends Controller
         $this->repository = $repository;
     }
 
+    public function index()
+    {
+
+    }
+
     public function create(Request $request, JsonFormatter $formater)
     {
-        $data = $formater->format($request->json);
+        $data = $formater->formatJsonToArray($request->json);
 
         return new CategoryResource($this->repository->insertCategory($data));
     }
