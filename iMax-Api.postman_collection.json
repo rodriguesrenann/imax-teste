@@ -65,7 +65,7 @@
 					"urlencoded": [
 						{
 							"key": "json",
-							"value": "{\"id\":1,\n   \"name\":\"Camiseta polo\",\n   \"description\":\"Camiseta de algodão com listras coloridas\",\n   \"price\":15000,\n   \"category_id\":2}",
+							"value": "{\"id\":1,\n   \"name\":\"Camiseta polo\",\n   \"description\":\"Camiseta de algodão com listras coloridas\",\n   \"price\":15000,\n   \"category_id\":1}",
 							"type": "text"
 						}
 					]
