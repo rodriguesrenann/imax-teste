@@ -25,7 +25,7 @@ class CategoryController extends Controller
     public function create(Request $request, JsonFormatter $jsonFormater)
     {
         $data = $jsonFormater->formatJsonToArray($request->json);
-
+        
         $validator = Validator::make($data, [
             'name' => 'max:30'
         ]);

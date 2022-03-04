@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Product;
+use Illuminate\Database\Eloquent\Collection;
 
 class ProductRepository
 {
@@ -21,5 +22,10 @@ class ProductRepository
             'price' => $data['price'],
             'category_id' => $data['category_id']
         ]);
+    }
+
+    public function getAllProducts(): Collection
+    {
+        return $this->model->all();
     }
 }
