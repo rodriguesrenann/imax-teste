@@ -22,9 +22,9 @@ class CategoryController extends Controller
         return CategoryResource::collection($this->repository->getAllCategories());
     }
 
-    public function create(Request $request, JsonFormatter $formater)
+    public function create(Request $request, JsonFormatter $jsonFormater)
     {
-        $data = $formater->formatJsonToArray($request->json);
+        $data = $jsonFormater->formatJsonToArray($request->json);
 
         $validator = Validator::make($data, [
             'name' => 'max:30'
