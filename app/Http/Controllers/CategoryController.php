@@ -19,6 +19,7 @@ class CategoryController extends Controller
 
     public function index()
     {
+        return CategoryResource::collection($this->repository->getAllCategories());
     }
 
     public function create(Request $request, JsonFormatter $formater)

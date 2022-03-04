@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Category;
+use Illuminate\Database\Eloquent\Collection;
 
 class CategoryRepository
 {
@@ -13,10 +14,15 @@ class CategoryRepository
         $this->model = $model;
     }
 
-    public function insertCategory(array $data)
+    public function insertCategory(array $data): Category
     {
         return $this->model->create([
             'name' => $data['name']
         ]);
+    }
+
+    public function getAllCategories(): Collection
+    {
+        return $this->model->all();
     }
 }
